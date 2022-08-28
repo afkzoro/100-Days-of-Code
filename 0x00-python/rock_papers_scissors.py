@@ -1,5 +1,5 @@
 import random
-rock = ('''
+rock = str('''
     _______
 ---'   ____)
       (_____)
