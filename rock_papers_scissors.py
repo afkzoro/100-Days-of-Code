@@ -26,7 +26,7 @@ scissors = str('''
 ---.__(___)
 ''')
 
-#Created strings from literals
+#Created list from literals
 art = []
 art.append(rock)
 art.append(paper)
