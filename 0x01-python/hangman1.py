@@ -8,7 +8,7 @@ print(logo)
 
 chosen_word = random.choice(word_list)
 
-print(f"Solution is {chosen_word}")
+#print(f"Solution is {chosen_word}")
 
 #Length
 length = len(chosen_word)
