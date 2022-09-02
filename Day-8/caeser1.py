@@ -1,6 +1,8 @@
 from art import logo
 
 print(logo)
+
+
 flag = True
 while flag != False:
     alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -32,8 +34,11 @@ while flag != False:
             print(f"The encoded text is {cipher_text}")
         elif choice == "decode":
             print(f"The decoded text is {cipher_text}")
+    
     caeser(pl_ciph=text, move=shift, choice=direction)
+    
     decide = input("Do you want to run another program? Yes or No:  ")
+    
     if decide == "Yes":
         pass
     elif decide == "No":
