@@ -14,7 +14,7 @@ while flag != True and i < loop:
     
     auc_dic[name] = bid
     
-    #To i 
+    #To check for new bidders
     decide = input("Are there any other bidders? Yes or No:  \n").lower()
     
     if decide == "yes":
