@@ -12,9 +12,11 @@ def is_leap(year):
 
 def days_in_month(yr,mnt):
   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  
   if is_leap(yr) == True:
       month_days[1] = 29
       return month_days[(mnt - 1)]
+  
   elif is_leap(yr) == False:
       return month_days[(mnt - 1)]
   
