@@ -10,19 +10,21 @@ def deal_card(num):
 
 user_card.append(deal_card(2))
 computer_card.append(deal_card(2))
-flat_user = []
-for sublist in user_card:
-    for i in sublist:
-        flat_user.append(i)
-    
-
-flat_pc = []
-for sublist in computer_card:
-    for i in sublist:
-        flat_pc.append(i)
 
 flag = True
 while flag != False:
+    
+    flat_user = []
+    for sublist in user_card:
+        for i in sublist:
+            flat_user.append(i)
+    
+
+    flat_pc = []
+    for sublist in computer_card:
+        for i in sublist:
+            flat_pc.append(i)
+
     
     def calculate_score(cards):
         score = sum(cards)
@@ -48,8 +50,8 @@ while flag != False:
     decide = input("Type 'y' to get another card, type 'n' to pass: ").lower()
     
     if decide == "y":
-        flat_user.append(deal_card(1))
-        flat_pc.append(deal_card(1))
+        user_card.append(deal_card(1))
+        computer_card.append(deal_card(1))
     elif decide == "n":
         print(f"Your final hand: {flat_user}, final score: {calculate_score(flat_user)}")
         print(f"Computer's final hand: {flat_pc}, final score: {calculate_score(flat_pc)}")
