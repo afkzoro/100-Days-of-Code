@@ -40,24 +40,29 @@ while flag != False:
                     new_score = sum(cards)
                     return new_score
                 else:
-                    print("You lose")
+                    pass
         else:
             return score
     
     print(f"\tYour cards: {flat_user}, current score: {calculate_score(flat_user)}")
     print(f"\tComputer's first card: {flat_pc[0]}")
     
-    decide = input("Type 'y' to get another card, type 'n' to pass: ").lower()
+    if calculate_score(flat_user) == 0:
+        print("You won")
+        break
+    elif calculate_score(flat_pc) == 0:
+        print("You lose. The computer wins")
+        break
+    elif calculate_score(flat_user) > 21:
+        print("You lose")
+        break
+    
+    decide = input("Do you want to pull another card 'y' for yes or 'n' for no:  ")
     
     if decide == "y":
         user_card.append(deal_card(1))
-        computer_card.append(deal_card(1))
-    elif decide == "n":
-        print(f"Your final hand: {flat_user}, final score: {calculate_score(flat_user)}")
-        print(f"Computer's final hand: {flat_pc}, final score: {calculate_score(flat_pc)}")
-        
-        if calculate_score(flat_user) < calculate_score(flat_pc):
-            print("You lose")
-        else:
-            flag = False
-            print("You win")
+    elif decide == "n": #Buggggggggggggggggggggggggg
+        while calculate_score(flat_pc) < 17:
+            computer_card.append(deal_card(1))
+    
+    sumUser = sum(flat_user) 
