@@ -17,7 +17,7 @@ def blackjack():
     computer_card.extend(deal_card(2))
 
 
-    flag = True #Loop keeps the loop going
+    flag = True #Flag keeps the loop going
     while flag != False:
         
         #Function to calculate sum of lists
@@ -62,7 +62,7 @@ def blackjack():
             print(f"\tYour final hand is {user_card}, final score is {calculate_score(user_card)}")
             print(f"\tComputer's final hand is {computer_card}, final score is {calculate_score(computer_card)}")
              
-            #Function to compare final scores after user typed no    
+            #Function to compare final scores if user typed 'n'   
             def compare(first_card, second_card):
                 if calculate_score(first_card) == calculate_score(second_card):
                     print("Its a draw!")
