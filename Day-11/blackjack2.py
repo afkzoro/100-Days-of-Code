@@ -73,6 +73,12 @@ def blackjack():
                 elif calculate_score(second_card) > calculate_score(first_card) and calculate_score(second_card) < 21:
                     print("You lose!. The computer wins")
                     
+                elif calculate_score(first_card) > 21 and calculate_score(second_card) < 21:
+                    print("You Lose!")
+                    
+                elif calculate_score(second_card) > 21 and calculate_score(first_card) < 21:
+                    print("You Win!")
+                    
             compare(first_card=user_card, second_card=computer_card)
             
             
