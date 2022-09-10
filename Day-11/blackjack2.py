@@ -82,7 +82,7 @@ def blackjack():
             compare(first_card=user_card, second_card=computer_card)
             
             
-player = input("Do you want to play a game of black jack. If yes enter 'y' if no enter 'n'").lower()
+player = input("Do you want to play a game of black jack. If yes enter 'y' if no enter 'n':  ").lower()
 
 loop = True
 
