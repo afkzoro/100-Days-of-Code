@@ -80,7 +80,7 @@ while flag != False:
                 resources["coffee"] = resources["coffee"] - coffee_esp
                 money += 1.5
                 change = cash_sum - 1.5
-                print(f"Here's ${change} in change")
+                print(f"Here's ${round(change, 2)} in change")
                 print("Here's your espresso ☕. Enjoy!")
             else:
                 print("Sorry that's not enough. Money refunded")
