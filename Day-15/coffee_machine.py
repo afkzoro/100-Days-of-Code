@@ -1,4 +1,4 @@
-from data import MENU, resources
+from machine_data import MENU, resources
 
 money = 0
 flag = True
