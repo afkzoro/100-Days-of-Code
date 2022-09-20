@@ -6,11 +6,13 @@ flag = True
 
 while flag != False:
     user = input(f"What would you like (espresso/latte/cappuccino): ").lower()
+    maker = CoffeeMaker()
+    rep = MoneyMachine()
     
     if user == "report":
-        maker = CoffeeMaker()
         maker.report()
-        rep = MoneyMachine()
         rep.report()
+        
+    if maker.is_resource_sufficient(user) == True:
     
             
