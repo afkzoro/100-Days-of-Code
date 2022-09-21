@@ -22,6 +22,8 @@ while flag != False:
     else:
         choice = menu.find_drink(user)
         if maker.is_resource_sufficient(choice) == True:
-            pay = money.process_coins()
+            
+            #pay = money.process_coins()
+            
             if money.make_payment(choice.cost) == True:
-                
+                maker.make_coffee(choice)
