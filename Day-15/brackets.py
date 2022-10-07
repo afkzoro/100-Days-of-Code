@@ -1,14 +1,6 @@
-from turtle import position
-
-
 open_brackets = ["[","{","("]
 close_brackets = ["]","}",")"]
 def is_paired(myStr: str):
-    """
-    Loop through a string and match open and close brackets
-    Pops it if they match.
-    if lenght of new list is greater than or equal to 1 there's an unbalanced bracket
-    """
     record = []
     for i in myStr:
         if i in open_brackets:
