@@ -1,11 +1,23 @@
 def square(user):
-    if user > 0 and user <= 64:
-        return (f"The number of grains on square {user} is {user}")
-    else:
-        raise ValueError("Square must be between 1 and 64")
-
+    """_summary_
+ 
+    Args:
+        user (_type_): _description_
+ 
+    Raises:
+        ValueError: _description_
+ 
+    Returns:
+        _type_: _description_
+    """
+    if user <= 0 or user > 64:
+        raise ValueError("square must be between 1 and 64")
+    return 2**(user - 1)
+    
 def total():
-    sum = 0
-    for i in range(1, 65):
-        sum += i
-    return sum
+    """_summary_
+ 
+    Returns:
+        _type_: _description_
+    """
+    return 2**64 -1
